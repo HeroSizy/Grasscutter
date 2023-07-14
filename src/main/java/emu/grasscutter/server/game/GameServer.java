@@ -318,7 +318,7 @@ public final class GameServer extends KcpServer implements Iterable<Player> {
                 1000L);
         Grasscutter.getLogger().info(translate("messages.status.free_software"));
         Grasscutter.getLogger()
-                .info(translate("messages.game.address_bind", GAME_INFO.accessAddress, address.getPort()));
+                .info(translate("messages.game.address_bind", address.toString(), address.getPort()));
         ServerStartEvent event = new ServerStartEvent(ServerEvent.Type.GAME, OffsetDateTime.now());
         event.call();
     }
